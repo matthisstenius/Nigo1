@@ -19,6 +19,6 @@
 </head>
 <body>
 	<div class="wrapper grid">
-	 	<header class="header pad clearfix">
+	 	<header class="header">
 	 		<a class="logo" href="<?php echo home_url('/'); ?>"></a>
 	 	</header>

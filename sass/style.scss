@@ -141,12 +141,14 @@ $grey: #696969;
 */ 
 	header {
 		border-bottom: 2px solid #000;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
 	}
 
 	.logo {
 		background: url('img/logo.png') no-repeat;
 		display: block;
-		widows: 212px;
+		width: 212px;
 		height: 116px;
 	}
 	
@@ -154,16 +156,22 @@ $grey: #696969;
  *  Nav
  * ---------------------------------------------------------------- 
 */
-	.main-nav a {
-		text-transform: uppercase;
-		font-size: 1.2em;
+	.main-nav {
+		a {
+			text-transform: uppercase;
+			font-size: 1.2em;
+		}
+
+		ul {
+			margin-top: 0;
+		}
 	}
 /* ---------------------------------------------------------------- 
  *  Home
  * ---------------------------------------------------------------- 
 */ 
 	.portfolio-item {
-		margin: 10px 0;
+		margin-bottom: 20px;
 	}
 
 	.portfolio-item-link {
@@ -214,6 +222,10 @@ $grey: #696969;
 	article p {
 		width: 80%;
 	}
+
+	.content h1 {
+		margin-top: 0;
+	}
 /* ---------------------------------------------------------------- 
  *  About
  * ---------------------------------------------------------------- 
@@ -238,86 +250,15 @@ $grey: #696969;
 		font-style: italic;
 		font-size: .8em;
 	}
-/* ----------------------------------------------------------------
- *  Contact Form
- * ----------------------------------------------------------------
-*/
-
-
-label {
-  display: block;
-  //color: $blueGrey;
-  margin: 20px 0 10px 0;
-}
-
-.wpcf7-form-control-wrap {
-	display: block;
-}
-
-form input, textarea {
-	padding: 11px;
-	width: 90%;
-    display: block;
-    border: 1px solid #ccc;
-    font-size: 0.8em;
-    box-shadow: inset 0 1px 3px #ddd;
-    border-radius: 4px;
-    -webkit-transition: 0.3s linear border;
-    -moz-transition: 0.3s linear border;
-    -ms-transition: 0.3s linear border;
-    -o-transition: 0.3s linear border;
-    transition: 0.3s linear border;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-
-    &:focus {
-    	outline: 0;
-    	outline: thin dotted \9; /* IE6-9 */
-    	border-color: #129FEA;
-    }
-}
-
-textarea {
-  min-height: 170px;
-}
-
-input[type=submit], .btn-read-more {
-  display: block;
-  margin: 10px 0;
-  cursor: pointer;
-  border: none;
-  color: white;
-  border-radius: 3px;
-  text-align: center;
-
-  &:hover {
-  	color: white;
-  }
-}
-
-input[type=submit] {
-  //background: $blue;
-  font-size: 1.3em;
-}
-
-.btn-read-more {
-	//background-color: $blueGrey;
-	padding: 10px;
-}
-
-.wpcf7-response-output {
-  margin: 0;
-  padding: 0;
-}
-
-.wpcf7-validation-errors {
-  //color: $red;
-}
-
+	
+	.blog-post {
+		margin-bottom: 45px;
+	}
 /* ----------------------------------------------------------------
  *  Footer
  * ----------------------------------------------------------------
 */
+	.footer {
+		text-align: center;
+	}
 	
