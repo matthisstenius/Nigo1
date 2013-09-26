@@ -1,0 +1,323 @@
+@import "mixin";
+@import "base";
+@import "grid";
+@import "fonts";
+
+// Colors
+
+$grey: #696969;
+
+/* ---------------------------------------------------------------- 
+ *  Base
+ * ---------------------------------------------------------------- 
+*/ 
+	html {
+		position: relative;
+	}
+	
+	body {
+		font-size: 16px;
+		font-family: $body;
+		padding: 20px;
+	}
+
+	.wrapper {
+		background-color: #fff;
+		margin: 0 auto;
+	}
+
+	.clearfix:before,
+	.clearfix:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+
+	.clearfix:after {
+	    clear: both;
+	}
+
+	.nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			float: left;
+			padding-left: 10px;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.hidden {
+		display: none;
+		visibility: hidden;
+		-webkit-transform: all .5s 0;
+	}
+
+	.overlay {
+		background: rgba(0, 0, 0, .7);
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+	}
+
+/* ---------------------------------------------------------------- 
+ *  WP-classes
+ * ---------------------------------------------------------------- 
+*/ 
+	.alignleft, .alignright {
+		@include breakpoint(500px) {
+			float: none !important; 
+		}
+	}
+
+	.alignleft {
+		float: left;
+		margin: 10px 10px 10px 0;
+	}
+
+	.alignright {
+		float: right;
+		margin: 10px 0 10px 10px;
+	}
+
+/* ---------------------------------------------------------------- 
+ *  Typo
+ * ---------------------------------------------------------------- 
+*/ 
+	h1, h2, h3, h4 {
+		font-weight: normal;
+		font-family: $headings;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1em;
+	}
+
+	h4 {
+		font-size: 1.2em;
+	}
+
+	p {
+		font-size: .9em;
+	}
+
+	a {
+		color: $grey;
+		text-decoration: none;
+		display: block;
+		font-family: $headings;
+
+		&:hover {
+			
+		}
+	}
+
+	.active {
+	   	//color: $red !important;
+
+	   	&:hover {
+	   		//color: $red;
+	   	}
+	}
+/* ---------------------------------------------------------------- 
+ *  Header
+ * ---------------------------------------------------------------- 
+*/ 
+	header {
+		border-bottom: 2px solid #000;
+	}
+
+	.logo {
+		background: url('img/logo.png') no-repeat;
+		display: block;
+		widows: 212px;
+		height: 116px;
+	}
+	
+/* ---------------------------------------------------------------- 
+ *  Nav
+ * ---------------------------------------------------------------- 
+*/
+	.main-nav a {
+		text-transform: uppercase;
+		font-size: 1.2em;
+	}
+/* ---------------------------------------------------------------- 
+ *  Home
+ * ---------------------------------------------------------------- 
+*/ 
+	.portfolio-item {
+		margin: 10px 0;
+	}
+
+	.portfolio-item-link {
+		opacity: .6;
+		-webkit-transition: opacity .5s 0;
+		position: relative;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+	
+	.portfolio-item-title {
+		color: white;
+		position: absolute;
+		top: 23%;
+		left: 39%;
+	}
+
+	.portfolio-item-content {
+		position: absolute;
+		top: 100px;
+		width: 750px;
+		background: black;
+		padding: 10px;
+		border-radius: 3px;
+		z-index: 1000;
+		color: white;
+		font-size: .9em;
+	}
+	
+	.portfolio-content-video, .portfolio-content-post {
+		float: left;
+	}
+
+	.portfolio-content-video {
+		width: 74%;
+	}
+
+	.portfolio-content-post {
+		width: 26%;
+	}
+
+/* ---------------------------------------------------------------- 
+ *  Page
+ * ---------------------------------------------------------------- 
+*/ 	
+	article p {
+		width: 80%;
+	}
+/* ---------------------------------------------------------------- 
+ *  About
+ * ---------------------------------------------------------------- 
+*/ 	
+	.staff {
+		margin-bottom: 40px;
+
+		p {
+			margin: 3px 0;
+		}
+	}
+/* ---------------------------------------------------------------- 
+ *  News
+ * ---------------------------------------------------------------- 
+*/
+	.post-title {
+		margin-bottom: 7px;
+	}
+
+	.post-date {
+		color: $grey;
+		font-style: italic;
+		font-size: .8em;
+	}
+/* ----------------------------------------------------------------
+ *  Contact Form
+ * ----------------------------------------------------------------
+*/
+
+
+label {
+  display: block;
+  //color: $blueGrey;
+  margin: 20px 0 10px 0;
+}
+
+.wpcf7-form-control-wrap {
+	display: block;
+}
+
+form input, textarea {
+	padding: 11px;
+	width: 90%;
+    display: block;
+    border: 1px solid #ccc;
+    font-size: 0.8em;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-transition: 0.3s linear border;
+    -moz-transition: 0.3s linear border;
+    -ms-transition: 0.3s linear border;
+    -o-transition: 0.3s linear border;
+    transition: 0.3s linear border;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+
+    &:focus {
+    	outline: 0;
+    	outline: thin dotted \9; /* IE6-9 */
+    	border-color: #129FEA;
+    }
+}
+
+textarea {
+  min-height: 170px;
+}
+
+input[type=submit], .btn-read-more {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+
+  &:hover {
+  	color: white;
+  }
+}
+
+input[type=submit] {
+  //background: $blue;
+  font-size: 1.3em;
+}
+
+.btn-read-more {
+	//background-color: $blueGrey;
+	padding: 10px;
+}
+
+.wpcf7-response-output {
+  margin: 0;
+  padding: 0;
+}
+
+.wpcf7-validation-errors {
+  //color: $red;
+}
+
+/* ----------------------------------------------------------------
+ *  Footer
+ * ----------------------------------------------------------------
+*/
+	
